@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.14",
+    "@fullcalendar/daygrid": "^6.1.14",
+    "@fullcalendar/react": "^6.1.14",
     "bootstrap-icons": "^1.11.3",
+    "moment": "^2.30.1",
     "next": "14.2.3",
-    "react": "^18",
+    "react": "^18.3.1",
+    "react-big-calendar": "^1.13.0",
     "react-bootstrap-icons": "^1.11.4",
-    "react-dom": "^18"
+    "react-dom": "^18.3.1",
+    "react-tooltip": "^5.26.4"
   },
   "devDependencies": {
     "eslint": "^8",

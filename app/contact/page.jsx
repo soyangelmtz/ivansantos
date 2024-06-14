@@ -1,55 +1,42 @@
 import React from "react";
-import { EnvelopeAt, Geo, Phone, PhoneLandscape, Telephone } from "react-bootstrap-icons";
+import { EnvelopeAt, Geo, Telephone } from "react-bootstrap-icons";
 
-function page() {
+function ContactPage() {
   return (
-    <div className=" w-[90vw] h-[90vh] m-auto">
-      <div className="w-full  h-[15vh] flex ">
-        <p className="text-6xl ml-20 mt-auto w-fit font-bold transition-all">Contact</p>
-      </div>
-      <div className=" w-full h-full">
-        <div className=" mx-auto my-20 w-[85vw] h-[60vh] grid grid-cols-2">
-          <div className="flex  ">
-            <div className="border-2 border-slate-800 dark:border-yellow-100 rounded-lg w-[35%] mr-10 ml-auto my-auto aspect-portrait overflow-hidden">
-              <img
-                className="object-cover w-full h-full hover:scale-110 transition-all ease-in-out"
-                src="/contact.jpg"
-                alt="Contact Image"
-              />
+    <div className="w-full min-h-screen flex flex-col items-center py-16 ">
+      <div className="w-11/12 md:w-2/3 lg:w-1/2 bg-slate-100 dark:bg-slate-950 shadow-lg rounded-lg overflow-hidden">
+        <div className="w-full h-64 bg-cover bg-center" style={{ backgroundImage: "url('/contact.jpg')", filter: "blur(1px)" }}></div>
+        <div className="p-8">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-yellow-200">Contacto</h1>
+          <p className="mt-4 text-gray-700 leading-relaxed dark:text-yellow-100">
+            Para cualquier consulta o colaboración, no dudes en ponerte en contacto con el Dr. Iván Alonso Santos López. Estamos aquí para ayudarte y responder a tus preguntas.
+          </p>
+          <div className="mt-8">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-yellow-100">Información de Contacto</h3>
+            <div className="mt-4">
+              <p className="flex items-center text-gray-700 dark:text-yellow-100">
+                <EnvelopeAt className="mr-2" /> 
+                <a href="mailto:ivansantos@uanl.edu.mx" className="hover:text-blue-500 ">ivansantos@uanl.edu.mx</a>
+              </p>
+              <p className="flex items-center mt-2 text-gray-700 dark:text-yellow-100">
+                <Telephone className="mr-2" />
+                +52 81 1234 5678
+              </p>
+              <p className="flex items-center mt-2 text-gray-700 dark:text-yellow-100">
+                <Geo className="mr-2" />
+                <a href="https://maps.app.goo.gl/d3cSHQ1sLaLzorfi7" target="_blank" className="hover:text-blue-500">División de Estudios de Posgrado, Facultad de Ciencias Químicas UANL</a>
+              </p>
             </div>
-          </div>
-          <div className=" flex  ">
-            <div className="h-[85%] w-[80%]  my-auto  ">
-              <p className="text-3xl ml-2 italic">Contact Information</p>
-
-              <div className="flex mt-12 group w-fit">
-                <EnvelopeAt height={30} className="transition-all text-4xl ml-8 mt-2 group-hover:-translate-y-1" />
-                <a
-                  className=" mt-auto hover:underline ml-2 hover:text-blue-400 transition-all text-lg"
-                  href="mailto:ivansantos@uanl.edu.mx"
-                  target="_blank"
-                >
-                  ivansantos@uanl.edu.mx
+            <div className="mt-8">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-yellow-100">Ubicación</h3>
+              <p className="mt-4 text-gray-700 leading-relaxed dark:text-yellow-100">
+                Nos encontramos en la Facultad de Ciencias Químicas de la Universidad Autónoma de Nuevo León (UANL), en la División de Estudios de Posgrado.
+              </p>
+              <div className="my-6 border md:w-[70%] mx-auto">
+                <a href="https://maps.app.goo.gl/d3cSHQ1sLaLzorfi7" target="_blank">
+                  <img src="/map-preview.png" alt="Ubicación en Google Maps" className="w-full h-64 object-cover rounded-lg hover:opacity-80 transition-opacity" />
                 </a>
               </div>
-              <div className="flex my-5 group w-fit">
-                <Telephone height={30} className="transition-all text-4xl ml-8 mt-2 group-hover:-translate-y-1" />
-                <p className=" text-lg cursor-pointer mt-auto hover:underline ml-2 hover:text-blue-400 transition-all">
-                  +82 81 1234 5678
-                </p>
-              </div>
-              <div className="flex group w-fit ">
-                <Geo height={30} className="transition-all text-4xl ml-8 mt-2 group-hover:-translate-y-1 " />
-                <a href="https://maps.app.goo.gl/d3cSHQ1sLaLzorfi7" target="_blank" className=" text-lg cursor-pointer mt-auto hover:underline ml-2 w-fit  hover:text-blue-400 transition-all">
-                  División de Estudios de Posgrado, Facultad de Ciencias
-                  Químicas UANL
-                </a>
-              </div>
-              <div className=" text-lg mt-20 ml-2  w-full">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus soluta optio id numquam, consequatur voluptatibus, reiciendis saepe blanditiis voluptates cum quia at nihil corporis accusantium minima dolore et, exercitationem ad officiis. 
-              </div>
-            </div>
-            <div>
             </div>
           </div>
         </div>
@@ -58,4 +45,4 @@ function page() {
   );
 }
 
-export default page;
+export default ContactPage;
